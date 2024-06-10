@@ -1,0 +1,407 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+/*MENU*/
+
+
+
+#menu{
+    position : fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background: rgb(117,117,205);
+background: linear-gradient(90deg, rgba(117,117,205,1) 1%, rgba(2,0,36,1) 50%, rgba(117,149,156,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    transform: scale(0);
+    transition: 0.5s;
+    z-index: 3;
+   
+}
+#menu.active
+{
+    transform: scale(1);
+}
+
+#menu ul
+{
+    position: relative;
+}
+
+#menu ul li 
+{
+    position: relative;
+    list-style:none;
+    text-align: center;
+    display: block;
+}
+#menu ul li a
+{ 
+    position: relative;
+   text-decoration: none;
+   font-size: 3.5em;
+   padding: 0 10px;
+   margin-top: 18%;
+   color: #ffffff;
+   font-weight: 700;
+   text-transform: uppercase;
+   display: inline-block;
+}
+#menu ul li:nth-child(1) a:hover
+{ 
+    color:  red;
+}
+#menu ul li:nth-child(2) a:hover
+{ 
+    color:  green;
+}
+#menu ul li:nth-child(3) a:hover
+{ 
+    color:  yellow;
+}
+#menu ul li:nth-child(4) a:hover
+{ 
+    color:  blue;
+}
+
+
+#toggleIcon
+{
+    position: fixed;
+    top:20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background:   url(img/open.png);
+    background-size: cover;
+    z-index: 4;
+    cursor: pointer;
+}
+#toggleIcon.active
+{
+   
+    background:url(img/close.png);
+    background-size: cover;
+  
+}
+/*Full Scrolling page*/
+/*Scroll du background est de Section */
+/*A modifier*/
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.PageScroll
+{
+    position: relative;
+    width: 100%;
+    height : 100vh;
+    overflow:auto;
+   scroll-snap-type: y mandatory;
+
+}
+
+.PageScroll .section
+{
+    position: relative;
+    width: 100%;
+    height : 100%;
+    scroll-snap-align: start;
+    background-blend-mode: multiply;
+}
+.PageScroll .section:nth-child(1)
+{
+    background:red url(img/bg1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.PageScroll .section:nth-child(2)
+{
+    background:green url(img/bg2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.PageScroll .section:nth-child(3)
+{
+    background:yellow url(img/bg3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.PageScroll .section:nth-child(4)
+{
+    background:blue url(img/bg4.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.PageScroll .section .content
+{
+    position: absolute;
+    bottom : 50px;
+    left:50px;
+    right: 50px;
+   /* max-width: 700px;*/
+}
+
+.PageScroll .section .content h2
+{
+    background-color: #ffffff;
+    color: black;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size : 2em;
+}
+.PageScroll .section .content p
+{
+    background-color: #ffffff;
+    color: black;
+    font-weight: 300;
+   margin-top: 10px;
+    padding: 10px 20px;
+   
+}
+.PageScroll .section .content p a
+{
+   
+    color: red;
+    font-weight: 300;
+  
+   
+}
+
+h1{
+    text-align: center;
+    color: #ddd;
+}
+
+.border{
+    width:100px;
+    height : 10px;
+    background: #34495e;
+    margin: 40px auto;
+}
+
+.contact-form
+{
+    max-width: 600px;
+    margin : auto;
+    padding:0 10px;
+    overflow: hidden;
+
+}
+
+.contact-form-text
+{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin:16px 0;
+    border:0;
+    background:#111;
+    padding: 20px 40px;
+    outline :none;
+    color:#ddd;
+    transition: 0.5s;
+    margin-top: 7%;
+}
+
+.contact-form-text:focus{
+    box-shadow: 0 0 10px 4px #34495e;
+}
+
+textarea.contact-form-text{
+    resize: none;
+    height: 120px;
+}
+
+.contact-form-btn
+{
+float: right;
+border: 0;
+background: #34495e;
+color:#ffffff;
+padding : 12px 50px;
+border-radius: 20px;
+background: #2980b9;
+}
+
+/*Presentation*/
+.circle {
+	border-radius: 50%;
+	width: 200px;
+    height: 200px; 
+    background: url(img/me.gif);
+    background-size: cover;
+    box-shadow: 0px 0px 0px 10px rgb(255, 255, 255);
+	/* width and height can be anything, as long as they're equal */
+}
+
+
+/*Veille*/
+
+/*
+body{
+    display: flex;
+justify-content: center;
+align-self: center;
+min-height: 100vh;
+background: #222222;
+}
+*/
+.VeilleContainer 
+{
+
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+   grid-template-rows: minmax(500px,1fr);
+    margin : 40px;
+    grid-auto-flow: dense;
+    grid-gap : 10px;
+}
+
+
+.VeilleContainer a{
+    background: #333333;
+    padding: 20px;
+    display: grid;
+    font-size: 20px;
+    place-items: center;
+    text-align: center;
+    color:#fff;
+    transition: 0.5s;
+    text-decoration: none;
+    
+}
+
+.VeilleContainer a:hover
+{
+    background: rgb(155, 18, 98);
+    background-size: #e91e6e;
+}
+
+.VeilleContainer a  img
+{
+    position: relative;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/*PROJET-SECTION*/
+.ProjetContainer
+{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    margin-left: 10%;
+    scroll-snap-type: x mandatory;
+    
+}
+
+.ProjetContainer .card
+{
+    margin: 1%;
+    position: relative;
+    scroll-snap-align: start;
+}
+.ProjetContainer .card .face
+{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.ProjetContainer .card .face.face1
+{
+    position: relative;
+    background: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+.ProjetContainer .card:hover .face.face1{ transform: translateY(0);background: #ff0057;}
+
+
+.ProjetContainer .card .face.face2
+{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    transform: translateY(-100px);
+}
+.ProjetContainer .card .face.face1 .content
+{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+.ProjetContainer .card:hover .face.face1 .content
+{
+    opacity: 1;
+   
+}
+.ProjetContainer .card .face.face1 .content img
+{
+    max-width: 100px;
+   
+}
+.ProjetContainer .card .face.face1 .content h3
+{
+   margin: 10px 0 0;
+   color: white;
+   
+}
+.ProjetContainer .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.ProjetContainer .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color:#333333;
+    padding: 5px;
+    border: 1px solid #333333;
+
+
+}
+
+.ProjetContainer .card .face.face2 .content a:hover
+{
+    background: #333333;
+    color: #ffffff;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+   }
+   ::-webkit-scrollbar-thumb {
+    background:  #333333;
+    border-radius: 10px;
+   }
+   ::-webkit-scrollbar-thumb:hover{
+    background: #ff0057;;
+   }
+   
